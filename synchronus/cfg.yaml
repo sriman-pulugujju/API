@@ -1,0 +1,258 @@
+authenticate:
+  url: http://101.101.64.49/api/authenticate
+  payload: "grant_type=password&username=perf_test&password=vC3m.123!"
+  headers: 
+    Content-Type : "application/x-www-form-urlencoded"
+    Authorization: "Basic dmNlbTpmcmVlQGMkMSE="
+
+   
+
+gpv:
+  url: "http://101.101.64.49/api/tr069/getParameterValues/1878D4-vSpeed-NUC-simulator-{device_id}?async=false"
+  headers:
+    Content-Type: "application/json"
+  payload: 
+    options: 
+      priority: 100
+      expirationTimeoutSeconds: 180
+      updateCachedDataRecord: True
+      disableCaptureConstraint: True
+      triggerCR: True
+    function: 
+      name: "getParameterValues"
+      parameterNames: 
+        - "Device.DeviceInfo.Manufacturer"
+      operationTimeout: 30000
+
+
+# spv:
+#   url: "http://101.101.64.49/api/tr069/setParameterValues/1878D4-vSpeed-NUC-simulator-{device_id}?async=false"
+#   headers:
+#     Content-Type: "application/json"
+#   payload: 
+#     options:
+#       priority: 100
+#       expirationTimeoutSeconds: 180
+#       updateCachedDataRecord: true
+#       disableCaptureConstraint: true
+#       triggerCR: true
+#     function:
+#       name: "SetParameterValues"
+#       parameters:
+#         - name: "Device.DeviceInfo.Manufacturer"
+#           type: "string"
+#           value: "VZ"
+#           notificationChange: false
+
+devices:
+  ranges:
+    - start: 1
+      end: 100
+    # - start: 50001
+    #   end: 57000
+    # - start: 100001
+    #   end: 105000
+  prefix: "BOT"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#----------------------draft 1 for individual devices--------------------------
+# authenticate:
+#   url: http://101.101.63.49/api/authenticate
+#   payload: "grant_type=password&username=perf_test&password=vC3m.123!"
+#   headers: 
+#     Content-Type : "application/x-www-form-urlencoded"
+#     Authorization: "Basic dmNlbTpmcmVlQGMkMSE="
+
+   
+
+# gpv:
+#   url: "http://101.101.63.15:5000/api/tr069/getParameterValues/1878D4-vSpeed-NUC-simulator-{device_id}?async=false"
+#   headers:
+#     Content-Type: "application/json"
+#   payload: 
+#     options: 
+#       priority: 100
+#       expirationTimeoutSeconds: 60
+#       updateCachedDataRecord: True
+#       disableCaptureConstraint: True
+#       triggerCR: True
+#     function: 
+#       name: "getParameterValues"
+#       parameterNames: 
+#         - "Device.DeviceInfo.Manufacturer"
+#       operationTimeout: 30000
+
+
+# spv:
+#   url: "http://101.101.63.49/api/tr069/setParameterValues/1878D4-vSpeed-NUC-simulator-{device_id}?async=false"
+#   headers:
+#     Content-Type: "application/json"
+#   payload: 
+#     options:
+#       priority: 100
+#       expirationTimeoutSeconds: 180
+#       updateCachedDataRecord: true
+#       disableCaptureConstraint: true
+#       triggerCR: true
+#     function:
+#       name: "SetParameterValues"
+#       parameters:
+#         - name: "Device.DeviceInfo.Manufacturer"
+#           type: "string"
+#           value: "VZ"
+#           notificationChange: false
+
+# devices:
+#   - "BOT010239"
+#   - "BOT010240"
+#   - "BOT010241"
+#   - "BOT010242"
+#   - "BOT010243"
+#   - "BOT010244"
+#   - "BOT010245"
+#   - "BOT010246"
+#   - "BOT010247"
+#   - "BOT010248"
+#   - "BOT010249"
+#   - "BOT010250"
+#   - "BOT010251"
+#   - "BOT010252"
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

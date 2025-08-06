@@ -1,0 +1,5 @@
+pyyaml
+requests
+rich
+urllib3
+influxdb-client

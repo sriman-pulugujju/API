@@ -30,12 +30,12 @@ jobs:
           python -m pip install --upgrade pip
           pip3 install -r synchronus/requirements.txt # install packages
 
-      - name: Generate cfg.yaml from template
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y gettext # for endsubst
-          envsubst < cfg.yaml.template > cfg.yaml
-          echo "cfg.yaml created"
+     # - name: Generate cfg.yaml from template
+      #  run: |
+       #   sudo apt-get update
+        #  sudo apt-get install -y gettext # for endsubst
+         # envsubst < cfg.yaml.template > cfg.yaml
+          #echo "cfg.yaml created"
 
       - name: Run the python script from subfolder
-        run: python synchronus/sync.py  #--config synchronus/cfg.yaml
+        run: python synchronus/sync.py  --config synchronus/cfg.yaml

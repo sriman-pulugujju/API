@@ -13,7 +13,8 @@ jobs:
     runs-on: ubuntu-latest  #virtual machine used by github
 
     env:
-      AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD}}
+      AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD }}
+      INFLUXDB_TOKEN: ${{ secrets.INFLUXDB_TOKEN }}
 
     steps:
       - name: checkout repo
@@ -29,5 +30,12 @@ jobs:
           python -m pip install --upgrade pip
           pip3 install -r synchronus/requirements.txt # install packages
 
+      - name: Generate cfg.yaml from template
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gettext # for endsubst
+          envsubst < cfg.yaml.template > cfg.yaml
+          echo "cfg.yaml created"
+
       - name: Run the python script from subfolder
-        run: python synchronus/sync.py --config synchronus/cfg.yaml
+        run: python synchronus/sync.py  #--config synchronus/cfg.yaml

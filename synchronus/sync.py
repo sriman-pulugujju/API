@@ -43,7 +43,7 @@ def record_metrics(measurement, fields, tags=None):
     write_api.write(bucket=INFLUXDB_BUCKET, org=INFLUXDB_ORG, record=point)
 
 # Load YAML config
-def load_config(file_path="/home/runner/work/VCEM_Performance/VCEM_Performance/synchronus/cfg.yaml"):
+def load_config(file_path="/synchronus/cfg.yaml"):
     with open(file_path, "r") as file:
         return yaml.safe_load(file)
 

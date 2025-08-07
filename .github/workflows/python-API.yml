@@ -31,7 +31,7 @@ jobs:
           pip3 install -r synchronus/requirements.txt # install packages
 
       - name: Generate cfg.yaml from template
-         run: |
+        run: |
            sudo apt-get update
            sudo apt-get install -y gettext # for endsubst
            envsubst < cfg.yaml.template > cfg.yaml

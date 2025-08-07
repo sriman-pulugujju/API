@@ -9,6 +9,7 @@ import influxdb_client
 from influxdb_client import Point
 import urllib3
 from influxdb_client.client.write_api import SYNCHRONOUS, WritePrecision
+import os
 
 # Disable SSL warnings 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -23,7 +24,8 @@ INFLUXDB_ORG = "vz"
 # INFLUXDB_TOKEN = "9sVTy3SbqK-K80yVQyG4Am2Kooz42FXsf9zSCY_nq4pkncvuyBSKiNibjtBEJQ1Mwy6ZCka6v31dGwHEuI3q1Q=="
 # INFLUXDB_TOKEN = "fW9j0X-s2VbmOoMLfDur2TG45PB37EAV2HIb0QsuaFRzM2cdVs8T7FmqrIBuVzLxrvYSocHMzk8VgbFoCEu3dA=="
 #INFLUXDB_TOKEN = "WI0juhVVA9dQAEzoJbWlenQyi1hyerYYc3oZQHlVsw0MI1mIYL8WwbIvacUhxIscu93w0tJLS3Br0d6zm5_kEg=="
-INFLUXDB_TOKEN = ${INFLUXDB_TOKEN}
+#INFLUXDB_TOKEN = ${INFLUXDB_TOKEN}
+ INFLUXDB_TOKEN = os.environ.get("INFLUXDB_TOKEN")
 
 # Initialize InfluxDB Client
 influx_client = influxdb_client.InfluxDBClient(

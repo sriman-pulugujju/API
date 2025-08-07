@@ -9,8 +9,11 @@ on:
   workflow_dispatch: # allow manual triggering from github ui
 
 jobs:
-  run-script:
+  run-sync:
     runs-on: ubuntu-latest  #virtual machine used by github
+
+    env:
+      AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD}}
 
     steps:
       - name: checkout repo

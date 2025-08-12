@@ -31,13 +31,13 @@ jobs:
           python -m pip install --upgrade pip
           pip3 install -r synchronus/requirements.txt # install packages
 
-      - name: Generate cfg.yaml from template
-        run: |
-           #sudo apt-get update
-           sudo apt-get install -y gettext # for envsubst
-           envsubst < synchronus/cfg.yaml.template > synchronus/cfg.yaml
-           echo "cfg.yaml created"
-           cat synchronus/cfg.yaml # optional to debug
+     # - name: Generate cfg.yaml from template
+     #   run: |
+     #      #sudo apt-get update
+     #      sudo apt-get install -y gettext # for envsubst
+     #      envsubst < synchronus/cfg.yaml.template > synchronus/cfg.yaml
+     #      echo "cfg.yaml created"
+     #      cat synchronus/cfg.yaml # optional to debug
 
       - name: Run the python script from subfolder
-        run: python3.9 synchronus/sync.py  #--config synchronus/cfg.yaml
+        run: python3.9 synchronus/sync.py  --config synchronus/cfg.yaml

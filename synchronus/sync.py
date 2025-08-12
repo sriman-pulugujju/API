@@ -70,7 +70,9 @@ def authenticate(api_config):
     print(headers)
     data = api_config["authenticate"]["payload"]
     print(data)
+    print(requests.post(url, headers=headers, data=data, verify=False))
     response = requests.post(url, headers=headers, data=data, verify=False)
+    print(response)
     if response.status_code == 200:
         token = response.json().get("access_token")
         if token:

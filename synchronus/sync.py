@@ -65,15 +65,18 @@ def generate_device_ids(api_config):
 def authenticate(api_config):
     console.print("\nAuthenticating...")
     url = api_config["authenticate"]["url"]
+    print{url}
     headers = api_config["authenticate"]["headers"]
+    print{headers}
     data = api_config["authenticate"]["payload"]
+    print{data}
     response = requests.post(url, headers=headers, data=data, verify=False)
     if response.status_code == 200:
         token = response.json().get("access_token")
         if token:
             console.print("Authentication successful!")
             return token
-    console.print(f"Authentication failed! Status: {response.status_code}")
+    console.print(f"Authentication failed by Sriman : ! Status: {response.status_code}")
     return None
 
 # Perform API call, always record status_code, record metrics if 200

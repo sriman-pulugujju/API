@@ -8,7 +8,7 @@ authenticate:
    
 
 gpv:
-  url: "http://101.101.63.15:5000/api/tr069/getParameterValues/1878D4-vSpeed-NUC-simulator-{device_id}?async=false"
+  url: "http://101.101.64.49/api/tr069/getParameterValues/1878D4-vSpeed-NUC-simulator-{device_id}?async=false"
   headers:
     Content-Type: "application/json"
   payload: 
@@ -27,7 +27,7 @@ gpv:
 devices:
   ranges:
     - start: 1
-      end: 100
+      end: 10
     # - start: 50001
     #   end: 57000
     # - start: 100001

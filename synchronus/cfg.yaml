@@ -1,0 +1,40 @@
+authenticate:
+  url: http://101.101.63.15:5000/api/authenticate
+  payload: "grant_type=password&username=perf_test&password=${AUTH_PASSWORD}"
+  headers: 
+    Content-Type : "application/x-www-form-urlencoded"
+    Authorization: "Basic dmNlbTpmcmVlQGMkMSE="
+
+   
+
+gpv:
+  url: "http://101.101.63.15:5000/api/tr069/getParameterValues/1878D4-vSpeed-NUC-simulator-{device_id}?async=false"
+  headers:
+    Content-Type: "application/json"
+  payload: 
+    options: 
+      priority: 100
+      expirationTimeoutSeconds: 180
+      updateCachedDataRecord: True
+      disableCaptureConstraint: True
+      triggerCR: True
+    function: 
+      name: "getParameterValues"
+      parameterNames: 
+        - "Device.DeviceInfo.Manufacturer"
+      operationTimeout: 30000
+
+devices:
+  ranges:
+    - start: 1
+      end: 100
+    # - start: 50001
+    #   end: 57000
+    # - start: 100001
+    #   end: 105000
+  prefix: "BOT"
+
+
+
+
+  

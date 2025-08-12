@@ -21,10 +21,10 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v4 # this checks out the coe to the runner
 
-      - name: set up python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.9.21' 
+     # - name: set up python
+     #   uses: actions/setup-python@v5
+     #   with:
+     #     python-version: '3.9.21' 
 
       - name: Install dependencies
         run: |
@@ -40,4 +40,4 @@ jobs:
            cat synchronus/cfg.yaml # optional to debug
 
       - name: Run the python script from subfolder
-        run: python synchronus/sync.py  #--config synchronus/cfg.yaml
+        run: python3.9 synchronus/sync.py  #--config synchronus/cfg.yaml

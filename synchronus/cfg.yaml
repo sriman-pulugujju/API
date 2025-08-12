@@ -1,6 +1,6 @@
 authenticate:
   url: http://101.101.64.49/api/authenticate
-  payload: "grant_type=password&username=perf_test&password=${AUTH_PASSWORD}"
+  payload: "grant_type=password&username=perf_test&password=vC3m.123!"
   headers: 
     Content-Type : "application/x-www-form-urlencoded"
     Authorization: "Basic dmNlbTpmcmVlQGMkMSE="

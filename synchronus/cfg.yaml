@@ -1,5 +1,5 @@
 authenticate:
-  url: http://101.101.63.15:5000/api/authenticate
+  url: http://101.101.64.49/api/authenticate
   payload: "grant_type=password&username=perf_test&password=${AUTH_PASSWORD}"
   headers: 
     Content-Type : "application/x-www-form-urlencoded"

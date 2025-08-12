@@ -10,7 +10,8 @@ on:
 
 jobs:
   run-sync:
-    runs-on: ubuntu-latest  #virtual machine used by github
+    #runs-on: ubuntu-latest  #virtual machine used by github
+    runs-on: self-hosted  #virtual machine used by github
 
     env:
       AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD }}

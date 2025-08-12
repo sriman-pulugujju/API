@@ -65,11 +65,11 @@ def generate_device_ids(api_config):
 def authenticate(api_config):
     console.print("\nAuthenticating...")
     url = api_config["authenticate"]["url"]
-    print{url}
+    print(url)
     headers = api_config["authenticate"]["headers"]
-    print{headers}
+    print(headers)
     data = api_config["authenticate"]["payload"]
-    print{data}
+    print(data)
     response = requests.post(url, headers=headers, data=data, verify=False)
     if response.status_code == 200:
         token = response.json().get("access_token")

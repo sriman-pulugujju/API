@@ -2,9 +2,9 @@ name: Run sync.py script
 
 #when the workflow should run:
 on:
-  push:
-    branches:
-      - main  # run on push to main branch
+  #push:
+  #  branches:
+  #    - main  # run on push to main branch
       
   workflow_dispatch: # allow manual triggering from github ui
 
@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: checkout repo
-        uses: actions/checkout@v4 # this checks out the coe to the runner
+        uses: actions/checkout@v4 # this checks out the code to the runner
 
      # - name: set up python
      #   uses: actions/setup-python@v5

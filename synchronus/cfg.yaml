@@ -27,7 +27,7 @@ gpv:
 devices:
   ranges:
     - start: 1
-      end: 15000
+      end: 5000
     # - start: 50001
     #   end: 57000
     # - start: 100001
